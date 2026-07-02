@@ -8,17 +8,18 @@ p.info {
 }
 
 h1 {
-	background-color: #7f7fcf;
-	color: white;
-	text-shadow: 2px 2px navy;
+	color: #d8d8ff;
+	text-shadow: 2px 2px gray;
+	background: none;
+	margin-left: 5px;
 }
 
 h2 {
-	border: solid 1px black;
-	margin: 5px;
 	font-family: cursive;
 	color: #3f3faf;
 	background: linear-gradient(to right, white, #ffefaf);
+	margin: 5px;
+	border: none;
 }
 
 div#zentai {
@@ -32,6 +33,7 @@ div#zentai {
 div#zentai > div {
 	background-color: #ffefaf;
 	padding: 5px;
+	border: 1px solid #e0d080;
 }
 
 div#zentai > div:last-child img {
