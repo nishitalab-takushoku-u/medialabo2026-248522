@@ -52,3 +52,13 @@ td {
     padding: 8px;
     border: 1px solid black;
 }
+
+
+
+function searchCity() {
+    let city = document.querySelector("#city").value;
+    console.log(city);
+}
+
+let button = document.querySelector("#search");
+button.addEventListener("click", searchCity);

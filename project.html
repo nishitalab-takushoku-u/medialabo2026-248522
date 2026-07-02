@@ -10,41 +10,13 @@
 
     <h1>世界の天気</h1>
 
-    <h2>北京市の天気</h2>
+    <p>
+        <label for="city">都市名:</label>
+        <input type="text" id="city">
+        <button id="search">検索</button>
+    </p>
 
-    <ul>
-        <li>都市名: 北京市</li>
-        <li>天気: 曇りがち</li>
-        <li>最低気温: 9.94℃</li>
-        <li>最高気温: 9.94℃</li>
-    </ul>
-
-    <table>
-        <tr>
-            <th>項目</th>
-            <th>値</th>
-        </tr>
-        <tr>
-            <td>経度</td>
-            <td>116.3972</td>
-        </tr>
-        <tr>
-            <td>緯度</td>
-            <td>39.9075</td>
-        </tr>
-        <tr>
-            <td>湿度</td>
-            <td>14%</td>
-        </tr>
-        <tr>
-            <td>風速</td>
-            <td>2.65</td>
-        </tr>
-        <tr>
-            <td>風向</td>
-            <td>197</td>
-        </tr>
-    </table>
+    <div id="result"></div>
 
     <script src="weather.js"></script>
 

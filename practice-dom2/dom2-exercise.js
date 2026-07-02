@@ -1,4 +1,4 @@
-//////////////// ここは書き換えてはいけない！ 
+//////////////// ここは書き換えてはいけない！
 
 let campus = {
 	address: "八王子市館町",
@@ -16,3 +16,25 @@ let gakka = [
 
 //////////////// ここから下にプログラムを書きたそう!
 
+function show() {
+	let h2addr = document.querySelector("#addr");
+
+	let p = document.createElement("p");
+	p.textContent = campus.address;
+	h2addr.insertAdjacentElement("afterend", p);
+
+	let h2dept = document.querySelector("#dept");
+
+	let ul = document.createElement("ul");
+
+	for (let g of gakka) {
+		let li = document.createElement("li");
+		li.textContent = g.name;
+		ul.appendChild(li);
+	}
+
+	h2dept.insertAdjacentElement("afterend", ul);
+}
+
+let button = document.querySelector("#show");
+button.addEventListener("click", show);

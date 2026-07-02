@@ -14,6 +14,71 @@ function print(data) {
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
 
+    let result = document.querySelector("#result");
+    result.innerHTML = "";
+
+    let h2 = document.createElement("h2");
+    h2.textContent = data.name + "の天気";
+    result.appendChild(h2);
+
+    let ul = document.createElement("ul");
+
+    let li1 = document.createElement("li");
+    li1.textContent = "都市名: " + data.name;
+    ul.appendChild(li1);
+
+    let li2 = document.createElement("li");
+    li2.textContent = "天気: " + data.weather[0].description;
+    ul.appendChild(li2);
+
+    let li3 = document.createElement("li");
+    li3.textContent = "最低気温: " + data.main.temp_min + "℃";
+    ul.appendChild(li3);
+
+    let li4 = document.createElement("li");
+    li4.textContent = "最高気温: " + data.main.temp_max + "℃";
+    ul.appendChild(li4);
+
+    result.appendChild(ul);
+
+    let table = document.createElement("table");
+
+    let tr = document.createElement("tr");
+
+    let th1 = document.createElement("th");
+    th1.textContent = "項目";
+
+    let th2 = document.createElement("th");
+    th2.textContent = "値";
+
+    tr.appendChild(th1);
+    tr.appendChild(th2);
+    table.appendChild(tr);
+
+    let items = [
+        ["経度", data.coord.lon],
+        ["緯度", data.coord.lat],
+        ["湿度", data.main.humidity + "%"],
+        ["風速", data.wind.speed],
+        ["風向", data.wind.deg]
+    ];
+
+    for (let item of items) {
+        let tr = document.createElement("tr");
+
+        let td1 = document.createElement("td");
+        td1.textContent = item[0];
+
+        let td2 = document.createElement("td");
+        td2.textContent = item[1];
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+
+        table.appendChild(tr);
+    }
+
+    result.appendChild(table);
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
