@@ -86,7 +86,7 @@ function printDom(data) {
 let button = document.querySelector("#search");
 button.addEventListener("click", sendRequest);
 
-// 都市名と都市IDの対応
+
 let cityId = {
     "カイロ": 360630,
     "モスクワ": 524901,
@@ -109,7 +109,7 @@ function sendRequest() {
 
     let id;
 
-    // 都市名ならIDへ変換、そうでなければ入力値(ID)をそのまま使用
+    
     if (cityId[city]) {
         id = cityId[city];
     } else {
