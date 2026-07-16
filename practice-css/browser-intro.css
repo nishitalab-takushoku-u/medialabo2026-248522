@@ -8,10 +8,11 @@ p.info {
 }
 
 h1 {
-	color: #d8d8ff;
-	text-shadow: 2px 2px gray;
-	background: none;
-	margin-left: 5px;
+    color: white;
+    font-size: 40px;
+    text-shadow:
+        0 0 10px navy,
+        4px 4px 8px navy;
 }
 
 h2 {
